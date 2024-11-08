@@ -8,7 +8,7 @@ public class Main {
         String userInput;
 
         do {
-            System.out.println("Which task would you like to use? Note that task 7 is the extra credit assignment [1-7] \nIf you would like to not run any task, input the word QUIT");
+            System.out.println("Which task would you like to use? [1-6] \nIf you would like to not run any task, input the word QUIT");
             userInput = scan.nextLine();
             switch (userInput) {
                 case "1":

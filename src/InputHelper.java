@@ -30,8 +30,8 @@ public class InputHelper {
                 done = true;
             } else {
                 System.out.println("Invalid num - " + prompt.toLowerCase());
+                scan.nextLine();
             }
-            scan.nextLine();
         } while (!done);
         return num;
     }
@@ -49,11 +49,12 @@ public class InputHelper {
                     done = true;
                 } else {
                     System.out.println("Invalid num - please enter in a positive nonzero integer value.");
+                    scan.nextLine();
                 }
             } else {
                 System.out.println("Invalid num - please enter in a positive nonzero integer value.");
+                scan.nextLine();
             }
-            scan.nextLine();
         } while (!done);
         return num;
     }
@@ -70,11 +71,12 @@ public class InputHelper {
                     done = true;
                 } else {
                     System.out.println("Invalid num - " + prompt.toLowerCase() + " [" + lowerBound + "-" + upperBound + "].");
+                    scan.nextLine();
                 }
             } else {
                 System.out.println("Invalid num - " + prompt.toLowerCase() + " [" + lowerBound + "-" + upperBound + "].");
+                scan.nextLine();
             }
-            scan.nextLine();
         } while (!done);
         return num;
     }
@@ -91,11 +93,12 @@ public class InputHelper {
                     done = true;
                 } else {
                     System.out.println("Invalid num - " + prompt.toLowerCase() + lowerBound + "-" + upperBound + ".");
+                    scan.nextLine();
                 }
             } else {
                 System.out.println("Invalid num - " + prompt.toLowerCase() + lowerBound + "-" + upperBound + ".");
+                scan.nextLine();
             }
-            scan.nextLine();
         } while (!done);
         return num;
     }
@@ -163,7 +166,23 @@ public class InputHelper {
 
     public static void prettyHeader(String msg) {
 
+        int buffer = (54-msg.length())/2;
+        for (int i=0; i<20; i++) {
+            System.out.print("***");
+        }
+        System.out.print("\n***");
+        for (int j = 0; j<buffer; j++) {
+                System.out.print(" ");
+        }
+        System.out.print(msg);
+        for (int j = 0; j<buffer; j++) {
+            System.out.print(" ");
+        }
+        System.out.print("***\n");
+        for (int i = 0; i<20; i++) {
+            System.out.print("***");
+        }
+        System.out.println();
     }
-
 
 }

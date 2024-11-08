@@ -80,6 +80,28 @@ public class Tasks {
 
     public static void Task6(Scanner scan) {
 
+        boolean done = false;
+        String userMessage = "";
+
+        System.out.println("Please enter a message you would like to put in a pretty header.");
+
+        do {
+            if (scan.hasNextLine()) {
+                userMessage = scan.nextLine();
+                if (userMessage.length()>54) {
+                    System.out.println("You message is too long - please try again.");
+                } else {
+                    done = true;
+                }
+            } else {
+                System.out.println("Invalid input - please enter a message you would like to put in a pretty header.");
+            }
+        } while (!done);
+
+       InputHelper.prettyHeader(userMessage);
+
+       System.out.println();
+
     }
 
 }
